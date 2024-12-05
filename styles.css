@@ -46,6 +46,7 @@
     grid-template-columns: 0.5fr 3fr 0.5fr 0.5fr 1.5fr;
     height: 10vh;
     align-items: center;
+    z-index: 2;
 }
 
 .magnify-img {
@@ -87,8 +88,8 @@ input {
 .nav {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr 1fr 1fr;
-    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.4);
-    z-index: 10;
+    box-shadow: 0px 8px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1;
 }
 
 .nav-bag-img {
@@ -121,9 +122,16 @@ input {
 .contents {
     display: grid;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: 0.5fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 10fr;
     background-color: #E2E8F0;
     margin-top: 3px;
+}
+
+.contents > h2 {
+    display: grid;
+    font-family: Arial, Helvetica, sans-serif;
+    align-self: flex-end;
+    margin-left: 25px;
 }
 
 .card-container {
@@ -136,14 +144,21 @@ input {
     border-radius: 12px;
     border-left: 12px solid gold;
     margin: 25px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-.card h1 {
+.card h2 {
     margin-top: 25px;
 }
 
-.card h1, p {
+.card h2, .card p {
     margin-left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card p {
+    margin-bottom: 5vh;
+    color: gray;
 }
 
 .icon-container {
@@ -151,6 +166,73 @@ input {
     justify-content: flex-end;
 }
 
+.icon-container > svg {
+    margin-bottom: 2vh;
+    margin-right: 2vw
+}
+
+.announcements-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.1fr 1fr;
+}
+
+.announcements-container h2 {
+    margin-left: 25px;
+    margin-top: 25px;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.announcements-card1, .announcements-card2 {
+    background-color: white;
+    border-radius: 12px;
+    margin: 25px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.announcements-card1 p {
+    display: grid;
+    margin-bottom: 2vh;
+    color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 25px;
+    font-size: 12px;
+}
+
+#ac2 {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+#ac2 > svg {
+    height: 50px;
+    align-self: center;
+    justify-self: center;
+}
+
+.subtext {
+  color: gray;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.subtext, .subtext-p {
+    align-self: center;
+    justify-self: flex-start;
+    margin: 0;
+}
+
+.trending {
+    margin-bottom: -25px;
+}
+
 svg {
     height: 25px;
+}
+
+hr {
+    color: lightgrey;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
 }
